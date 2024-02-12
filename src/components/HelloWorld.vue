@@ -98,7 +98,7 @@ import { BTable, BModal } from 'bootstrap-vue'
 
 
 export default {
-  name: 'HelloWorld',
+  name: 'Horários',
 
   data() {
     return {
