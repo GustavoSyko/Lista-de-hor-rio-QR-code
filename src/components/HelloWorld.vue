@@ -42,7 +42,7 @@
 
         <div class="celulaIcone">
           <img class="icone" src="../components/bus-alt.png" width="20px" height="20px" alt="Ícone" />
-          <b-badge class="badgeVerde" variant="warning">{{ data.item.id }}</b-badge>
+          <b-badge class="badgeAmarela" variant="warning">{{ data.item.id }}</b-badge>
           
         </div>
       </template>
@@ -242,7 +242,7 @@ template{
   color: #9c9c9c;
 }
 
-.badge {
+.badgeAmarela {
   font-size: 12px;
 }
 
