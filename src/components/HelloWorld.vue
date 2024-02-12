@@ -42,7 +42,7 @@
 
         <div class="celulaIcone">
           <img class="icone" src="../components/bus-alt.png" width="20px" height="20px" alt="Ícone" />
-          <b-badge class="badge" variant="warning">{{ data.item.id }}</b-badge>
+          <b-badge class="badgeVerde" variant="warning">{{ data.item.id }}</b-badge>
           
         </div>
       </template>
@@ -240,7 +240,6 @@ template{
 
 .icone {
   color: #9c9c9c;
-  max-width: 526px;
 }
 
 .badge {
@@ -254,20 +253,17 @@ template{
 
 .logo {
   margin-bottom: 30px;
-  max-width: 526px;
 }
 
 .divLabel {
   width: 100%;
   margin-top: 1.4rem;
-  max-width: 526px;
 }
 
 .divLabelPonto {
   width: 88%;
   border-top: solid 1px rgba(0, 0, 0, 0.121);
   padding-top: 1rem;
-  max-width: 526px;
 }
 
 .labelTable {
@@ -277,7 +273,6 @@ template{
   font-size: 15px;
   font-weight: bold;
   color: #0021a3;
-  max-width: 526px;
 }
 
 .labelTable2 {
@@ -286,11 +281,9 @@ template{
   font-size: 15px;
   font-weight: bold;
   color: #0021a3;
-  max-width: 526px;
 }
 
 .nomeLinha {
-  max-width: 526px;
 }
 
 .nomeLinhaTabela {
@@ -304,14 +297,12 @@ template{
     font-weight: 400;
   }
 
-  max-width: 526px;
 }
 
 .tableLinhasPonto {
   font-size: 12px;
   margin-bottom: -0.2rem;
   width: 88%;
-  max-width: 526px;
 }
 
 .celulaIcone {
@@ -319,7 +310,6 @@ template{
   display: flex;
   margin-top: 6px;
   gap: 4px;
-  max-width: 526px;
 }
 
 .testeDiv {
@@ -327,7 +317,6 @@ template{
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 526px;
 }
 
 
