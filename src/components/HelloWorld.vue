@@ -331,16 +331,7 @@ template{
   max-width: 526px;
 }
 
-@media screen and (max-width: 526px) {
-  .abraNoCelular{
-    display: none;
-  }
-}
-@media screen and (min-width: 526px) {
-  .abraNoCelular{
-    display: block;
-  }
-}
+
 @media screen and (min-width: 527px) {
 
   .download,
