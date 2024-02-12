@@ -92,7 +92,7 @@
 
 <script>
 
-import { BTable, BModal } from 'bootstrap-vue'
+import { BTable, BModal, BBadge } from 'bootstrap-vue'
 
 // verificar outro componente bootstrap para fazer as linhas ( group item talvez algo assims)
 
@@ -150,6 +150,7 @@ export default {
   components: {
     BTable,
     BModal,
+    BBadge,
 
   },
   methods: {
@@ -244,13 +245,11 @@ template{
 
 .badge {
   font-size: 12px;
-  max-width: 526px;
 }
 
 .badgeVerde {
   font-size: 12px;
   background-color: #0E7632;
-  max-width: 526px;
 }
 
 .logo {
