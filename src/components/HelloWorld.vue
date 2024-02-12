@@ -1,5 +1,6 @@
 <template>
   <div v-if="!showModal" class="testeDiv">
+    
     <img src="../components/lOGO UX BUZ PNG 3.png" alt="Ícone" />
     <!-- podemos colocar um loading usando o busy-state -->
     
@@ -174,6 +175,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+template{
+  
+}
+
 .slide-up-enter-active {
   transition: all 3s;
 }
@@ -186,38 +191,46 @@ export default {
 .slide-up-leave, .slide-up-enter-to {
   transform: translateY(0);
 }
-.download{
+.download {
   width: 160px;
-}
-.divParagrafoCinza{
-    font-size: 14px;
-    color: rgba(250, 250, 250, 0.466);
-    width: 220px;
+  max-width: 526px;
 }
 
-  .vantagens{
-    color: white;
-    font-size: 14px;
-    margin-top: 8px;
-  }
-  .UX{
-    color: white;
-  }
-.logo{
-    margin-top: -2rem;
-
+.divParagrafoCinza {
+  font-size: 14px;
+  color: rgba(250, 250, 250, 0.466);
+  width: 220px;
+  max-width: 526px;
 }
 
-  .body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 101vh;
-    min-width: 100vw;
-    background-color: #052144;
-    margin-top: -3.8rem;
-  }
+.vantagens {
+  color: white;
+  font-size: 14px;
+  margin-top: 8px;
+  max-width: 526px;
+}
+
+.UX {
+  color: white;
+  max-width: 526px;
+}
+
+.logo {
+  margin-top: -2rem;
+  max-width: 526px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 101vh;
+  min-width: 100vw;
+  background-color: #052144;
+  margin-top: -3.8rem;
+  max-width: 526px;
+}
 
 .slide-enter,
 .slide-leave-to {
@@ -226,32 +239,36 @@ export default {
 
 .icone {
   color: #9c9c9c;
+  max-width: 526px;
 }
 
 .badge {
   font-size: 12px;
+  max-width: 526px;
 }
 
 .badgeVerde {
   font-size: 12px;
   background-color: #0E7632;
+  max-width: 526px;
 }
 
 .logo {
   margin-bottom: 30px;
+  max-width: 526px;
 }
 
 .divLabel {
   width: 100%;
   margin-top: 1.4rem;
+  max-width: 526px;
 }
 
 .divLabelPonto {
   width: 88%;
   border-top: solid 1px rgba(0, 0, 0, 0.121);
   padding-top: 1rem;
-
-  /* margin-top: 1.4rem; */
+  max-width: 526px;
 }
 
 .labelTable {
@@ -261,19 +278,20 @@ export default {
   font-size: 15px;
   font-weight: bold;
   color: #0021a3;
+  max-width: 526px;
 }
 
 .labelTable2 {
   display: flex;
   width: auto;
-  /* margin-left: 1.4rem; */
   font-size: 15px;
   font-weight: bold;
   color: #0021a3;
+  max-width: 526px;
 }
 
 .nomeLinha {
-  /* display: flex; */
+  max-width: 526px;
 }
 
 .nomeLinhaTabela {
@@ -283,22 +301,18 @@ export default {
   margin-top: 8px;
 
   @media screen and (max-width: 426px) {
-
-    /* width: 186px; */
     font-size: 11px;
     font-weight: 400;
   }
+
+  max-width: 526px;
 }
 
 .tableLinhasPonto {
   font-size: 12px;
   margin-bottom: -0.2rem;
-
-  /* @media screen and (max-width: 520px) {
-  
-    font-size: 3.9vw;
-} */
   width: 88%;
+  max-width: 526px;
 }
 
 .celulaIcone {
@@ -306,6 +320,7 @@ export default {
   display: flex;
   margin-top: 6px;
   gap: 4px;
+  max-width: 526px;
 }
 
 .testeDiv {
@@ -313,5 +328,42 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 526px;
 }
+
+@media screen and (max-width: 526px) {
+  .abraNoCelular{
+    display: none;
+  }
+}
+@media screen and (min-width: 526px) {
+  .abraNoCelular{
+    display: block;
+  }
+}
+@media screen and (min-width: 527px) {
+
+  .download,
+  .divParagrafoCinza,
+  .vantagens,
+  .UX,
+  .logo,
+  .body,
+  .slide-enter,
+  .icone,
+  .badge,
+  .badgeVerde,
+  .divLabel,
+  .divLabelPonto,
+  .labelTable,
+  .labelTable2,
+  .nomeLinha,
+  .nomeLinhaTabela,
+  .tableLinhasPonto,
+  .celulaIcone,
+  .testeDiv {
+    display: none;
+  }
+}
+
 </style>
