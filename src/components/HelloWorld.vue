@@ -245,6 +245,7 @@ template{
 .badgeAmarela {
   font-size: 12px;
   background-color: #DAB500;
+  color: rgba(0, 0, 0, 0.565);
 }
 
 .badgeVerde {
