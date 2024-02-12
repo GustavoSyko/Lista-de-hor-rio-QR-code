@@ -243,12 +243,12 @@ template{
 }
 
 .badgeAmarela {
+  background-color: #DAB500;
   font-size: 12px;
 }
 
 .badgeVerde {
   font-size: 12px;
-  background-color: #0E7632;
 }
 
 .logo {
