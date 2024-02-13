@@ -19,14 +19,14 @@
     <div class="divSentidoTrajeto" v-if="this.linhaSelecionada.horarios">
 
       <p class="saidaTrajeto">{{ this.ida ? this.linhaSelecionada.horarios.ida.trajeto.saida :  this.linhaSelecionada.horarios.volta.trajeto.saida}}</p>
-      <img class="flechaAzul" src="../views/flecha azul sentido.png" width="12px" height="12px" alt="Ícone" />
+      <img class="flechaAzul" src="../views/flechaazulAtual.png" width="24px" height="28px" alt="Ícone" />
       <p class="saidaTrajeto">{{ this.ida ? this.linhaSelecionada.horarios.ida.trajeto.chegada :  this.linhaSelecionada.horarios.volta.trajeto.chegada}}</p>
       
       <b-button 
       class="flechas"
       @click="trocarSentidoRota"
       > 
-        <img  src="../views/double-arrow.png" width="24px" height="24px" alt="Ícone" />
+        <img  src="../components/Union.png" width="20px" height="20px" alt="Ícone" />
       </b-button>
     </div>
 
@@ -193,7 +193,7 @@ export default {
 
   methods: {
     voltar() {
-      this.$router.go(-1);
+      this.$router.push('/');
     },
     trocarSentidoRota(){
       return this.ida = !this.ida
@@ -232,6 +232,7 @@ color: #5A7495;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 78px;
   flex-direction: row;
 }
 
@@ -243,12 +244,14 @@ color: #5A7495;
 
 
 .labelTrajeto{
-  font-size: 14px;
-  width: 150px;
+  font-size: 16px;
+  width: 170px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.54);
 }
 
 .flechaAzul{
-  margin: 5px 12px 0px 12px;
+  margin: -2px 14px 0px 14px;
 }
 .flechas {
   display: flex;
@@ -256,7 +259,7 @@ color: #5A7495;
   align-items: center;
   background-color: transparent;
   border-color: transparent;
-  margin-left: 10px;
+  margin-left: 12px;
   width: 24px;
   height: 24px;
 }

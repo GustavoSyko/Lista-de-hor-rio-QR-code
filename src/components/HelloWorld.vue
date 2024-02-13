@@ -18,12 +18,13 @@
         </div>
       </template>
       <template #cell(name)="data">
-        <p class="nomeLinhaTabela">{{ data.item.name }}</p>
+        <div class="celulaIcone">
+          <p class="nomeLinhaTabela">{{ data.item.name }}</p>
+
+        </div>
       </template>
 
     </b-table>
-
-
 
 
 
@@ -47,20 +48,13 @@
         </div>
       </template>
       <template #cell(name)="data">
-        <div class="nomeLinha">
+        <div class="celulaIcone">
 
           <p class="nomeLinhaTabela">{{ data.item.name }}</p>
         </div>
       </template>
 
     </b-table>
-    
-    <transition name="slide">
-      <b-modal v-model="showModal" id="my-modal">
-        <!-- conteúdo do modal -->
-      </b-modal>
-    </transition>
-    
     
   </div>
   
@@ -102,6 +96,7 @@ export default {
 
   data() {
     return {
+      isPrimeiravez: true,
       showModal: false,
       tableFields: [
         { key: 'iconeBadge', label: '' },
@@ -120,7 +115,6 @@ export default {
         { id: 12, name: 'Troncal - Via Escola Agrícula', iconeBadge: '' },
         { id: 15, name: 'Troncal - Via Ponte Tamarindo', iconeBadge: '' },
         { id: 17, name: 'Troncal - Via Rua das Missões', iconeBadge: '' },
-        { id: 30, name: 'Troncal - Via Rua Governador Jorge Lacerda', iconeBadge: '' },
         { id: 31, name: 'Troncal - Via Rua dos Caçadores', iconeBadge: '' },
         { id: 32, name: 'Troncal - Via Água Verde', iconeBadge: '' },
         { id: 70, name: 'Troncal - Via Proeb/Aterro', iconeBadge: '' },
@@ -133,18 +127,44 @@ export default {
         { id: 122, name: 'Via Moínho', iconeBadge: '' },
         { id: 123, name: 'Itoupavazinha', iconeBadge: '' },
         { id: 124, name: 'Felipe Bauer', iconeBadge: '' },
-        { id: 125, name: 'Franz Volles', iconeBadge: '' }
+        { id: 125, name: 'Franz Volles', iconeBadge: '' },
       ],
     };
   },
   mounted() {
-    // this.showModal = true;
-    setTimeout(() => {
-      this.showModal = true
-    },100)
-    setTimeout(() => {
-      this.showModal = false
-    }, 5500)
+
+    if (sessionStorage.getItem('firstVisit') === null) {
+      sessionStorage.setItem('firstVisit', 'done');
+    } else {
+      setTimeout(() => {
+        this.showModal = true
+        this.isPrimeiravez = false
+      },100)
+      setTimeout(() => {
+        this.showModal = false
+        this.isPrimeiravez = false
+      }, 5000)
+    }
+
+    // if (this.isPrimeiravez) {
+    //   // this.showModal = true;
+    //   setTimeout(() => {
+    //     this.showModal = true
+    //     this.isPrimeiravez = false
+    //   },100)
+    //   setTimeout(() => {
+    //     this.showModal = false
+    //     this.isPrimeiravez = false
+    //   }, 5000)
+    // }
+
+  
+  },
+  watch:{
+    $route (to, from) {
+    this.isPrimeiravez = from.name == null ? true : false
+    console.log(from)
+  }
   },
 
   components: {
@@ -244,11 +264,22 @@ template{
 
 .badgeAmarela {
   font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 24px;
+  margin-right: 8px;
   background-color: #DAB500;
   color: rgba(0, 0, 0, 0.565);
 }
 
 .badgeVerde {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 24px;
   font-size: 12px;
   background-color: #0E7632;
 }
@@ -264,7 +295,7 @@ template{
 
 .divLabelPonto {
   width: 88%;
-  border-top: solid 1px rgba(0, 0, 0, 0.121);
+  /* border-top: solid 1px rgba(0, 0, 0, 0.121); */
   padding-top: 1rem;
 }
 
@@ -286,17 +317,27 @@ template{
 }
 
 .nomeLinha {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* min-width: fit-content; */
+
 }
 
 .nomeLinhaTabela {
-  font-size: 3vw;
-  height: 10px;
-  min-width: 220px;
-  margin-top: 8px;
+  display: flex;
+  text-align: left;
+  /* justify-content: start; */
+  margin-top: 1rem;
+  font-size: 16px;
+  
+  /* height: 18px; */
+  /* min-width: 220px; */
+  color: rgba(0, 0, 0, 0.782);
 
   @media screen and (max-width: 426px) {
-    font-size: 11px;
-    font-weight: 400;
+    font-size: 14px;
+    /* font-weight: 400; */
   }
 
 }
@@ -310,8 +351,11 @@ template{
 .celulaIcone {
   margin-left: -5px;
   display: flex;
-  margin-top: 6px;
-  gap: 4px;
+  justify-content: left;
+  align-items: center;
+  height: 50px;
+  /* margin-top: 6px; */
+  gap: 4px; 
 }
 
 .testeDiv {
