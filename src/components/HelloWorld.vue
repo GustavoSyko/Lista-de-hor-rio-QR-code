@@ -56,6 +56,13 @@
 
     </b-table>
     
+    <transition name="slide">
+      <b-modal v-model="showModal" id="my-modal">
+        <!-- conteúdo do modal -->
+      </b-modal>
+    </transition>
+    
+    
   </div>
   
   <transition v-else name="slide-up">
@@ -96,7 +103,7 @@ export default {
 
   data() {
     return {
-      isPrimeiravez: true,
+      isPrimeiravez: false,
       showModal: false,
       tableFields: [
         { key: 'iconeBadge', label: '' },
@@ -132,39 +139,13 @@ export default {
     };
   },
   mounted() {
-
-    if (sessionStorage.getItem('firstVisit') === null) {
-      sessionStorage.setItem('firstVisit', 'done');
-    } else {
-      setTimeout(() => {
-        this.showModal = true
-        this.isPrimeiravez = false
-      },100)
-      setTimeout(() => {
-        this.showModal = false
-        this.isPrimeiravez = false
-      }, 5000)
-    }
-
-    // if (this.isPrimeiravez) {
-    //   // this.showModal = true;
-    //   setTimeout(() => {
-    //     this.showModal = true
-    //     this.isPrimeiravez = false
-    //   },100)
-    //   setTimeout(() => {
-    //     this.showModal = false
-    //     this.isPrimeiravez = false
-    //   }, 5000)
-    // }
-
-  
-  },
-  watch:{
-    $route (to, from) {
-    this.isPrimeiravez = from.name == null ? true : false
-    console.log(from)
-  }
+   this.showModal = true;
+   setTimeout(() => {
+     this.showModal = true
+   },100)
+   setTimeout(() => {
+     this.showModal = false
+   }, 5500)
   },
 
   components: {
