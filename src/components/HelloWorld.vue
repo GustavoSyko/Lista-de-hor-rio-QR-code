@@ -372,7 +372,7 @@ export default {
 
 .labelOu{
   color: rgba(255, 255, 255, 0.641);
-  /* margin-top: -25px; */
+  margin-top: 25px;
   /* margin-bottom: -1.2rem;
   position: fixed;
   bottom: 5rem; */
@@ -566,7 +566,7 @@ color: #5A7495;
 }
 
 .logo {
-  margin-top:   3rem;  
+  margin-top:   7rem;  
   max-width: 526px;
 }
 
