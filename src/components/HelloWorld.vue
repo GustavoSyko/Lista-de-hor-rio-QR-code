@@ -510,6 +510,10 @@ color: #5A7495;
   flex-direction: row;
   justify-content: center;
   margin-top: 6px;
+   @media screen and (min-width: 527px) {
+  position:relative;
+  z-index:1;
+  }
 }
 .nav {
   display: flex;
