@@ -875,7 +875,7 @@ color: #5A7495;
     max-height: 640px;  
     background-color: white;
     
-    /* height: 739px; */
+    height: 640px;
   }
 }
 
