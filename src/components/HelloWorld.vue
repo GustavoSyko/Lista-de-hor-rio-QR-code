@@ -676,8 +676,8 @@ color: #5A7495;
   @media screen and (min-width: 527px) {
   min-width: 310px;
   min-height: 640px;
-  max-width: 310px;
-  max-height: 640px;
+/*   max-width: 310px;
+  max-height: 640px; */
   background-color: #052144;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
