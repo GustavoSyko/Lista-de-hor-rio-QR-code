@@ -592,6 +592,8 @@ color: #5A7495;
   background-color: #052144;
 
   @media screen and (min-width: 527px) {
+    position:relative;
+    z-index:1;
     display: flex;
     flex-direction: row;
     align-items: center;
