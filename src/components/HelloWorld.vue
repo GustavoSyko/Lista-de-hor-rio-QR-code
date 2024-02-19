@@ -1,6 +1,10 @@
 <template>
-  <div>
+  <div class="divFundo"> 
+    <img class="abraNoCelular" src="../../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="360px" height="740px" alt="teste"> 
   <div v-if="!showModal && !mostrarViewHorarios" class="testeDiv">
+    
+    <div class="divTables">
+
     
     <img src="../components/lOGO UX BUZ PNG 3.png" alt="Ícone" />
     <!-- podemos colocar um loading usando o busy-state -->
@@ -56,7 +60,7 @@
       </template>
 
     </b-table>
-    
+  </div>
     <!-- <transition name="slide">
       <b-modal v-model="showModal" id="my-modal">
         conteúdo do modal
@@ -68,7 +72,8 @@
   
   <transition  name="slide-up">
     
-    <div v-if="showModal">
+    <div  v-if="showModal">
+      <!-- <img class="abraNoCelular" src="../../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="360px" height="740px" alt="teste">  -->
         <div class="body">
           <div class="divInformacoes">
             
@@ -103,7 +108,7 @@
 
 
   <div class="about" v-if="mostrarViewHorarios && !showModal">
-
+    
     <div class="nav">
       <b-button 
         class="botaoVoltar" 
@@ -370,6 +375,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+
+@media screen and (min-width: 527px) {
+  .abraNoCelular{
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 0;
+    position: fixed;
+  }
+}
+
 .labelOu{
   color: rgba(255, 255, 255, 0.641);
   margin-top: 25px;
@@ -383,6 +397,8 @@ export default {
   margin-top:-0.5rem;
   margin-bottom: 1.5rem;
   font-size: 14px;
+  position: relative;
+  z-index: 1;
   color: rgba(255, 255, 255, 0.834);
 }
 
@@ -465,6 +481,20 @@ color: #5A7495;
   align-items: center;
   background-color: transparent;
   border-color: transparent;
+  position: relative;
+  z-index: 1;
+  margin-left: 12px;
+  width: 24px;
+  height: 24px;
+}
+.flechas:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+  position: relative;
+  z-index: 1;
   margin-left: 12px;
   width: 24px;
   height: 24px;
@@ -481,11 +511,31 @@ color: #5A7495;
   display: flex;
   height: 4px;
   margin-top: -2.5rem;
+  @media screen and (min-width: 527px) {
+    display: flex;
+  height: 4px;
+  margin-top: 1.5rem;
+
+  }
 }
 
 .botaoVoltar {
   background-color: transparent;
   border-color: transparent;
+  position: relative;
+  z-index: 1;
+  
+  /* height: 24px;
+  width: 24px; */
+  left: 0;
+}
+.botaoVoltar:hover {
+  background-color: transparent;
+  border-color: transparent;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+
   /* height: 24px;
   width: 24px; */
   left: 0;
@@ -528,10 +578,22 @@ color: #5A7495;
   flex-direction: row;
   align-items: center;
   justify-content: start;
-  margin-top: 0.2rem;
   width: auto;
+  margin-top: 0.2rem;
   height: 82px;
   background-color: #052144;
+
+  @media screen and (min-width: 527px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 82px;
+    background-color: #052144;
+
+  }
 }
 
 .download {
@@ -566,7 +628,7 @@ color: #5A7495;
 }
 
 .logo {
-  margin-top:   7rem;  
+  margin-top:   5rem;  
   max-width: 526px;
 }
 
@@ -575,11 +637,25 @@ color: #5A7495;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* padding-top: -5rem; */
   height: 480px;
   /* position: fixed; */
   /* top: 0; */
 }
 
+.divFundo{
+  @media screen and (min-width: 527px) {
+    position: fixed;
+    top: 0;
+    background-color: black;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
 .body {
   /* display: flex; */
   /* flex-direction: column; */
@@ -589,8 +665,17 @@ color: #5A7495;
   /* height: 101vh; */
   min-width: 100vw;
   background-color: #052144;
-  margin-top: -3.8rem;
+  /* margin-top: -1.3rem; */
   max-width: 526px;
+
+  @media screen and (min-width: 527px) {
+  min-width: 330px;
+  min-height: 720px;
+  background-color: #052144;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 25px;
+  }
 }
 
 .slide-enter,
@@ -686,6 +771,9 @@ color: #5A7495;
   font-size: 12px;
   margin-bottom: -0.2rem;
   width: 88%;
+  @media screen and (min-width: 527px) {
+    
+  }
 }
 
 .celulaIcone {
@@ -694,19 +782,123 @@ color: #5A7495;
   justify-content: left;
   align-items: center;
   height: 50px;
-  /* margin-top: 6px; */
   gap: 4px; 
 }
 
-.testeDiv {
-  margin-top: -30px;
+.divTables::-webkit-scrollbar {
+    width: 0px;
+    border-radius: 999px;
+}
+
+.divTables::-webkit-scrollbar-track {
+    /* background: #f1f1f15f; */
+    opacity: 0;
+}
+
+.divTables::-webkit-scrollbar-thumb {
+    /* background: #dab600ad; */
+    /* border-radius: 999px; */
+    opacity: 0;
+}
+
+.divTables::-webkit-scrollbar-thumb:hover {
+    /* background: #977e00; */
+    opacity: 0;
+}
+
+.divTables{
+  @media screen and (min-width: 527px) {
+    margin-top: 1.5rem;
+    overflow-y: auto;
+    /* width: 360px; */
+    /* height: 740px;   */
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
+    
+    /* max-width: 360px;
+    max-height: 740px;   */
+    /* background-color: white; */
+    
+    height: 739px;
+  }
+}
+
+.about::-webkit-scrollbar {
+    width: 0px;
+    border-radius: 999px;
+}
+
+.about::-webkit-scrollbar-track {
+    /* background: #f1f1f15f; */
+    opacity: 0;
+}
+
+.about::-webkit-scrollbar-thumb {
+    /* background: #dab600ad; */
+    /* border-radius: 999px; */
+    opacity: 0;
+}
+
+.about::-webkit-scrollbar-thumb:hover {
+    /* background: #977e00; */
+    opacity: 0;
+}
+.about{
+  margin-top: 3.5rem;
+
+  @media screen and (min-width: 527px) {
+    overflow-y: auto;
+    /* width: 360px; */
+    /* height: 740px;   */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    
+    /* position: relative;
+    z-index: 1; */
+    border-radius: 25px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    min-width: 330px;
+    min-height: 720px;  
+    max-width: 330px;
+    max-height: 720px;  
+    background-color: white;
+    
+    /* height: 739px; */
+  }
+}
+
+.testeDiv {
+
+  /* margin-top: -30px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @media screen and (min-width: 527px) {
+    /* margin-top: -30px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 330px;
+    min-height: 720px;  
+    max-width: 330px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    max-height: 720px;    
+    background-color: white;
+    border-radius: 25px;
+
+  }
+  
 }
 
 
-@media screen and (min-width: 527px) {
+/* @media screen and (min-width: 527px) {
 
   .download,
   .divParagrafoCinza,
@@ -729,6 +921,6 @@ color: #5A7495;
   .testeDiv {
     display: none;
   }
-}
+} */
 
 </style>

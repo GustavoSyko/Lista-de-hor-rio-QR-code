@@ -1,10 +1,13 @@
 <template>
   <div id="app">
     <nav class="teste">
-      <h1 class="abraNoCelular">Abra no celular, ou coloque em modo Celular</h1>
-    <h1 class="abraNoCelular">Aperte CTRL + SHIFT + I</h1>
+      <!-- <h1 class="abraNoCelular">Abra no celular, ou coloque em modo Celular</h1>
+    <h1 class="abraNoCelular">Aperte CTRL + SHIFT + I</h1>-->
     <h1 class="abraNoCelular">E selecione na caixa a direita</h1>
-      <img class="abraNoCelular" src="../src/components/Captura de tela 2024-02-12 000549.png" width="800px" height="680px" alt="teste">
+
+
+      <!-- <img class="abraNoCelular" src="../public/vecteezy_smart-mobile-phone-transparent-png-mockup-mobile-mockup_7731284.jpg" width="350px" height="640px" alt="teste">  -->
+      <img class="abraNoCelular" src="../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="350px" height="640px" alt="teste"> 
 
 
       <!-- <router-link to="/">Home</router-link>  -->
@@ -21,9 +24,9 @@
     display: none;
   }
 }
-@media screen and (min-width: 526px) {
+@media screen and (min-width: 527px) {
   .abraNoCelular{
-    display: block;
+    background-color: white;
   }
 }
 
@@ -43,7 +46,7 @@
 }
   
 nav {
-  padding: 30px;
+  /* padding: 30px; */
 }
 
 nav a {
