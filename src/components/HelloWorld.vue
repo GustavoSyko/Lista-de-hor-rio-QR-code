@@ -1,6 +1,6 @@
 <template>
   <div class="divFundo"> 
-    <img class="abraNoCelular" src="../../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="360px" height="740px" alt="teste"> 
+    <img  class="abraNoCelular" src="../../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="360px" height="740px" alt="teste"> 
   <div v-if="!showModal && !mostrarViewHorarios" class="testeDiv">
     
     <div class="divTables">
@@ -603,6 +603,11 @@ color: #5A7495;
   height: 120px;
   width: 160px;
   max-width: 526px;
+  @media screen and (min-width: 527px) {
+    position: relative;
+    z-index: 1;
+
+  }
 }
 
 .divParagrafoCinza {
@@ -647,7 +652,7 @@ color: #5A7495;
   @media screen and (min-width: 527px) {
     position: fixed;
     top: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.952);
     display: flex;
     min-height: 100vh;
     min-width: 100vw;

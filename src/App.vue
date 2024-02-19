@@ -3,11 +3,11 @@
     <nav class="teste">
       <!-- <h1 class="abraNoCelular">Abra no celular, ou coloque em modo Celular</h1>
     <h1 class="abraNoCelular">Aperte CTRL + SHIFT + I</h1>-->
-    <h1 class="abraNoCelular">E selecione na caixa a direita</h1>
+    <!-- <h1 class="abraNoCelular">E selecione na caixa a direita</h1> -->
 
 
       <!-- <img class="abraNoCelular" src="../public/vecteezy_smart-mobile-phone-transparent-png-mockup-mobile-mockup_7731284.jpg" width="350px" height="640px" alt="teste">  -->
-      <img class="abraNoCelular" src="../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="350px" height="640px" alt="teste"> 
+      <!-- <img class="abraNoCelular" src="../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="350px" height="640px" alt="teste">  -->
 
 
       <!-- <router-link to="/">Home</router-link>  -->
