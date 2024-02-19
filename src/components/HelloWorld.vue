@@ -461,6 +461,10 @@ color: #5A7495;
 .divColuna{
   display: flex;
   flex-direction: column;
+  @media screen and (min-width: 527px) {
+  position:relative;
+  z-index:1;
+  }
 }
 
 
