@@ -857,7 +857,7 @@ color: #5A7495;
   margin-top: 3.5rem;
 
   @media screen and (min-width: 527px) {
-    overflow-y: auto;
+/*     overflow-y: auto; */
     /* width: 360px; */
     /* height: 740px;   */
     /* display: flex; */
@@ -875,7 +875,7 @@ color: #5A7495;
     max-height: 640px;  
     background-color: white;
     
-    height: 640px;
+/*     height: 640px; */
   }
 }
 
