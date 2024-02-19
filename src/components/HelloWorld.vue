@@ -1,6 +1,6 @@
 <template>
   <div class="divFundo"> 
-    <img  class="abraNoCelular" src="../../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="360px" height="740px" alt="teste"> 
+    <img  class="abraNoCelular" src="../../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="340px" height="680px" alt="teste"> 
   <div v-if="!showModal && !mostrarViewHorarios" class="testeDiv">
     
     <div class="divTables">
@@ -643,7 +643,7 @@ color: #5A7495;
   justify-content: center;
   align-items: center;
   /* padding-top: -5rem; */
-  height: 480px;
+  height: 420px;
   /* position: fixed; */
   /* top: 0; */
 }
@@ -674,8 +674,10 @@ color: #5A7495;
   max-width: 526px;
 
   @media screen and (min-width: 527px) {
-  min-width: 330px;
-  min-height: 720px;
+  min-width: 310px;
+  min-height: 660px;
+  max-width: 310px;
+  max-height: 660px;
   background-color: #052144;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -827,7 +829,7 @@ color: #5A7495;
     max-height: 740px;   */
     /* background-color: white; */
     
-    height: 739px;
+    /* height: 739px; */
   }
 }
 
@@ -867,10 +869,10 @@ color: #5A7495;
     border-radius: 25px;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    min-width: 330px;
-    min-height: 720px;  
-    max-width: 330px;
-    max-height: 720px;  
+    min-width: 310px;
+    min-height: 660px;  
+    max-width: 310px;
+    max-height: 660px;  
     background-color: white;
     
     /* height: 739px; */
@@ -889,12 +891,12 @@ color: #5A7495;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 330px;
-    min-height: 720px;  
-    max-width: 330px;
+    min-width: 310px;
+    min-height: 660px;  
+    max-width: 310px;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    max-height: 720px;    
+    max-height: 660px;    
     background-color: white;
     border-radius: 25px;
 
