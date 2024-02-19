@@ -1,6 +1,6 @@
 <template>
   <div class="divFundo"> 
-    <img  class="abraNoCelular" src="../../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="340px" height="680px" alt="teste"> 
+    <img  class="abraNoCelular" src="../../public/—Pngtree—smartphone mockup blank display android_6073224.png" width="340px" height="660px" alt="teste"> 
   <div v-if="!showModal && !mostrarViewHorarios" class="testeDiv">
     
     <div class="divTables">
@@ -675,9 +675,9 @@ color: #5A7495;
 
   @media screen and (min-width: 527px) {
   min-width: 310px;
-  min-height: 660px;
+  min-height: 640px;
   max-width: 310px;
-  max-height: 660px;
+  max-height: 640px;
   background-color: #052144;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -870,12 +870,12 @@ color: #5A7495;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     min-width: 310px;
-    min-height: 660px;  
+    min-height: 640px;  
     max-width: 310px;
-    max-height: 660px;  
+    max-height: 640px;  
     background-color: white;
     
-    /* height: 739px; */
+    height: 640px;
   }
 }
 
@@ -892,11 +892,11 @@ color: #5A7495;
     flex-direction: column;
     align-items: center;
     min-width: 310px;
-    min-height: 660px;  
+    min-height: 640px;  
     max-width: 310px;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    max-height: 660px;    
+    max-height: 640px;    
     background-color: white;
     border-radius: 25px;
 
